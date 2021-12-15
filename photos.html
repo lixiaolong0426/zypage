@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Photos</title>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+	<link href="#" rel="shortcut icon" type="image/vnd.microsoft.icon">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="https://at.alicdn.com/t/font_1086271_84fdhn8j8a5.css">
+	<link rel="stylesheet" href="css/bgstyle.css">
+	<script src="js/cord.js"></script>
+</head>
+
+<body>
+	<audio controls autoplay>
+		<source src="mp3/zzsc.mp3"></audio>
+
+
+	<!-- 背景动画 -->
+	<div id="midground" class="wall"></div>
+	<div id="foreground" class="wall"></div>
+	<div id="top" class="wall"></div>
+
+
+	<!-- 绳子文字 -->
+	<canvas id="canvas" width="900px" height="270px"></canvas>
+
+	<!-- 导航 -->
+	<div class="nav">
+		<div class="logo">
+		</div>
+		<div class="main-menu">
+			<ul>
+				<li>
+					<a href="html/teammates.html" class="people">
+						<i></i>
+						<span>MESSAGE</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="pictures">
+						<i></i>
+						<span>PHOTOS</span>
+					</a>
+
+				</li>
+			</ul>
+
+		</div>
+
+	</div>
+
+	<!-- 照片墙 -->
+	<div class="photos">
+		<div class="container">
+			<ul id="hexGrid">
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph1.jpg" alt="1" />
+						<h1>潘珍茹</h1>
+						<p>本组创意小能手，只有你做不到，没有我想不到</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph2.jpg" alt="2" />
+						<h1>潘珍茹</h1>
+						<p>“我一定会减肥成功的！！！”</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph3.jpg" alt="3" />
+						<h1>王开成</h1>
+						<p>本组颜值担当，帅绝一组，还有隔壁组。</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph4.jpg" alt="4" />
+						<h1>曹成</h1>
+						<p>本组最萌吉祥物，没有运气差的，只有我不喜欢的</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="https://index.ccqe.top/">
+						<img src="images/ph5.gif" alt="5" />
+						<h1>曹成</h1>
+						<p>"好好做人，努力暴富"</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph6.jpg" alt="6" />
+						<h1>潘珍茹</h1>
+						<p>人生座右铭:好好学习，天天向上。</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph7.jpg" alt="7" />
+						<h1>王开成</h1>
+						<p>“嘤嘤嘤”</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph8.jpg" alt="8" />
+						<h1>王开成</h1>
+						<p>人生金句：人生得意须尽欢，莫使金樽空对月；花开堪折直须折，莫待无花空折枝
+						</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph9.jpg" alt="9" />
+						<h1>曹成</h1>
+						<p>座右铭：踏踏实实做事，清清白白做人。</p>
+					</a>
+				</li>
+
+			</ul>
+		</div>
+
+		<div id="newpost" style="display:none; " class="container">
+			<ul id="hexGrid">
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph10.jpg" alt="10" />
+						<h1>李爱华</h1>
+						<p>本组技术公关，只要你敢想，我就敢做。</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph11.jpg" alt="11" />
+						<h1>李爱华</h1>
+						<p>王者口头禅：“老哥，我错了”</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph12.jpg" alt="12" />
+						<h1>李小龙</h1>
+						<p>本组咸鱼组长，兼职夸夸组组长<br>
+						 今天你夸了吗？</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph13.jpg" alt="13" />
+						<h1>王子强</h1>
+						<p>本组战术大师，任何阴谋都会被我拆的分崩离析。</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph14.jpg" alt="14" />
+						<h1>王子强</h1>
+						<p>“天气冷，我先睡了”</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph15.jpg" alt="15" />
+						<h1>李爱华</h1>
+						<p>人生金句：宠辱不惊，看庭前花开花落，去留无意，望天外云卷云舒。</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph16.jpg" alt="16" />
+						<h1>李小龙</h1>
+						<p>“老哥带带我”</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph17.jpg" alt="17" />
+						<h1>李小龙</h1>
+						<p>座右铭：生命不息，奋斗不止。</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph18.jpg" alt="18" />
+						<h1>王子强</h1>
+						<p>座右铭：有志者，事竟成。</p>
+					</a>
+				</li>
+
+			</ul>
+
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="templatemo_loadmore">
+					<button class="gallery_more" id="button" onClick="showhide()">还没看够？</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script>
+		function showhide() {
+			var div = document.getElementById("newpost");
+			if (div.style.display !== "none") {
+				div.style.display = "none";
+			} else {
+				div.style.display = "block";
+			}
+		}
+		$('.gallery_more').click(function () {
+			$("#button").toggleClass('gallery_more');
+			if ($("#button").hasClass('gallery_more')) {
+				$("#button").text('还没看够？');
+			} else {
+				$("#button").text('真的没有了！');
+			}
+		});
+	</script>
+
+	<script>
+		"use strict";
+		var scene = new Scene(document.querySelector('#canvas'));
+		scene.run();
+		var phrase = ' I WERE YOU ';
+		var r = new Rope({
+			x: scene.canvas.width * 0.15,
+			y: 40,
+			length: scene.canvas.width * 0.7,
+			points: phrase.length,
+			vertical: false,
+			dangleEnd: false,
+			fixedEnds: true,
+			stiffness: 1.5,
+			constrain: false,
+			gravity: 0.1
+		});
+		var center = r.nodes.length / 2;
+		var ropes = r.nodes.map(function (n, i) {
+			n.set(n.x, 60 + 80 * (1 - Math.abs((center - i) % center / center)));
+			if (phrase[i] !== ' ') {
+				return new Rope({
+					startNode: n,
+					x: n.x,
+					y: n.y,
+					length: 60,
+					points: 4,
+					letter: phrase[i],
+					vertical: true,
+					stiffness: 1,
+					constrain: false,
+					gravity: 0.5
+				});
+			}
+		});
+		var first = r.nodes[0];
+		var last = r.nodes[r.nodes.length - 1];
+		first.set(2, -2);
+		last.set(scene.canvas.width - 2, -2);
+		r.makeConstraints();
+		ropes = ropes;
+		scene.addRope(r);
+		ropes.filter(function (r) {
+			return r;
+		}).forEach(function (r) {
+			r.makeConstraints();
+			scene.addRope(r);
+		});
+	</script>
+</body>
+
+</html>
